@@ -1,0 +1,48 @@
+/* // nodemon src/app.js
+
+
+
+
+// app.get("*", (req, res) => {
+//     res.status(404).send('Page not found');
+// });
+
+
+// // 404 handler (for all undefined routes)
+// app.get('*', (req, res) => {
+//   res.status(404).sendFile(__dirname + '/public/404.html');
+// });
+
+
+// wi wi-day icons
+// wi wi-day-sunny
+// wi wi-day-cloudy
+// wi wi-day-cloudy-gusts
+// wi wi-day-cloudy-windy
+// wi wi-day-fog
+// wi wi-day-hail
+// wi wi-day-haze
+// wi wi-day-lightning
+// wi wi-day-rain
+// wi wi-day-rain-mix
+// wi wi-day-rain-wind
+// wi wi-day-showers
+// wi wi-day-sleet
+// wi wi-day-sleet-storm
+// wi wi-day-snow
+// wi wi-day-snow-thunderstorm
+// wi wi-day-snow-wind
+// wi wi-day-sprinkle
+// wi wi-day-storm-showers
+// wi wi-day-sunny-overcast
+// wi wi-day-thunderstorm
+// wi wi-day-windy
+// wi wi-solar-eclipse
+// wi wi-hot
+// wi wi-day-cloudy-high
+// wi wi-day-light-wind */
+
+/* run npm install */
+/* npm start */
+/* to run this file, use the following command in your terminal: nodemon src/app.js */
+/* Constructed URL: https://api.openweathermap.org/data/2.5/weather?q={cityName}&appid={API_KEY}&units=metric */
