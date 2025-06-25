@@ -1,26 +1,30 @@
-# 🌤️ Weather App
+🌤️ Weather App
 
-A sleek and responsive **Weather Web Application** built using **Node.js**, **Express.js**, and **Handlebars (HBS)**.  
-It fetches real-time weather data using the **OpenWeatherMap API** and displays it with dynamic weather icons and themed UI.
+A sleek and responsive Weather Web Application built using Node.js, Express.js, and Handlebars (HBS).  
+It fetches real-time weather data using the OpenWeatherMap API and displays it with dynamic weather icons and themed UI.
 
----
 
-## 🚀 Demo
 
+🚀 Live Demo (Render.com)
+  https://weather-app-966r.onrender.com
+
+
+🚀 local Demo
 > http://localhost:8000/
+> http://localhost:8000/weather?address={cityName}
 
----
 
-## 🧰 Tech Stack
+
+🧰 Tech Stack
 
 - **Backend**: Node.js, Express.js
 - **Frontend**: HTML, CSS, JavaScript
 - **Templating Engine**: Handlebars (HBS)
 - **API**: OpenWeatherMap API
 
----
 
-## 📂 Project Structure
+
+📂 Project Structure
 
 weather-app/
 ├── public/ # Static files (CSS, JS)
@@ -81,4 +85,3 @@ Date display
 🙌 Contributing
 Feel free to fork and contribute via pull requests.
 For major changes, open an issue first to discuss what you would like to change.
-
