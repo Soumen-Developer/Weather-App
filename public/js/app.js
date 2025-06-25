@@ -20,8 +20,12 @@ dateElement.textContent =
 weatherForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const location = search.value.trim();
-  if (!location) return;
-
+  if (!location) {
+    weatherCondition.textContent = "Please Provide a City Name!!";
+    locationElement.textContent = "";
+    tempElement.textContent = "";
+    return;
+  }
   locationElement.textContent = "Loading...";
   tempElement.textContent = "";
   weatherCondition.textContent = "";
@@ -32,7 +36,9 @@ weatherForm.addEventListener('submit', (event) => {
     .then(response => response.json())
     .then(data => {
       if (data.error) {
-        locationElement.textContent = data.error;
+        weatherCondition.textContent = "City Not Found!!";
+        locationElement.textContent = "";
+        tempElement.textContent = "";
       } else {
         const desc = data.description.toLowerCase();
 
@@ -61,7 +67,9 @@ weatherForm.addEventListener('submit', (event) => {
       }
     })
     .catch(err => {
-      locationElement.textContent = "Something went wrong";
+      weatherCondition.textContent = "City Not Found!!";
+      locationElement.textContent = "";
+      tempElement.textContent = "";
     });
 });
 
