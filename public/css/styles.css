@@ -85,7 +85,7 @@ h2 {
 .weatherLocation input:focus {
   outline: 0 none;
   border-color: #080705;
-  box-shadow: 0 0 0 3px rgba(8, 7, 5, 0.2);
+box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
 }
 
 .weatherLocation button {
@@ -97,6 +97,7 @@ h2 {
   font-size: 18px;
   cursor: pointer;
   transition: all 0.3s ease;
+box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
 }
 
 .weatherLocation button:hover {
