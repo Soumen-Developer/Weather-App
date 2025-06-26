@@ -112,13 +112,12 @@ h2 {
   display: flex;
   align-items: center;        
   justify-content: center;     
-  font-size: 150px;
+  font-size: 100px;
   
 }
 
 .widget .weatherIcon i {
   margin-top: 30px;
-
 }
 
 .widget .weatherInfo {
@@ -213,9 +212,6 @@ h2 {
   .widget .weatherIcon {
     font-size: 60px;
     height: 120px;
-    border-bottom-width: 10px;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
   }
 
   .widget .weatherInfo {
@@ -315,10 +311,7 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding-top: 10px;
-    border-bottom-width: 10px;
-    margin-bottom: 0px;
-    padding-bottom: 10px;
+    padding-top: 10px
   }
 
   .widget .weatherInfo {
@@ -357,5 +350,3 @@ h2 {
 
   }
 }
-
-
