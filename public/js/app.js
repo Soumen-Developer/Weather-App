@@ -3,7 +3,7 @@ var fetchWeather = "/weather";
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 
-const weatherIcon = document.querySelector('.weatherIcon i'); // target <i> inside div
+const weatherIcon = document.querySelector('.weatherIcon i');
 const weatherCondition = document.querySelector('.weatherCondition');
 const tempElement = document.querySelector('.temperature span');
 const locationElement = document.querySelector('.place');
@@ -20,19 +20,38 @@ dateElement.textContent =
 document.addEventListener('DOMContentLoaded', () => {
   if (!weatherCondition.textContent) {
     weatherCondition.textContent = "Hello!!";
+    animateElement(weatherCondition, 'animate-fade');
+
   }
 });
+
+// animation trigger function
+const animateElement = (el, className) => {
+  el.classList.remove(className);
+  setTimeout(() => {
+    el.classList.add(className);
+    setTimeout(() => {
+      el.classList.remove(className); // clean up
+    }, 700); // matches CSS animation duration
+  }, 10); // slight delay to allow DOM update
+};
 
 weatherForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const location = search.value.trim();
+
   if (!location) {
     weatherCondition.textContent = "Please Provide a City Name!!";
+    animateElement(weatherCondition, 'animate-fade');
+
     locationElement.textContent = "";
     tempElement.textContent = "";
     return;
   }
+
   locationElement.textContent = "Loading...";
+  animateElement(locationElement, 'animate-fade');
+
   tempElement.textContent = "";
   weatherCondition.textContent = "";
 
@@ -43,12 +62,14 @@ weatherForm.addEventListener('submit', (event) => {
     .then(data => {
       if (data.error) {
         weatherCondition.textContent = "City Not Found!!";
+        animateElement(weatherCondition, 'animate-fade');
+
         locationElement.textContent = "";
         tempElement.textContent = "";
       } else {
         const desc = data.description.toLowerCase();
 
-        // Set wi icon
+        // Set weather icon
         if (desc.includes("clear")) {
           weatherIcon.className = "wi wi-day-sunny";
         } else if (desc.includes("cloud")) {
@@ -67,16 +88,25 @@ weatherForm.addEventListener('submit', (event) => {
           weatherIcon.className = "wi wi-day-cloudy";
         }
 
+        // Animate updated content
         locationElement.textContent = data.cityName;
+        animateElement(locationElement, 'animate-fade');
+
         tempElement.textContent = data.temperature + " °C";
+        animateElement(tempElement, 'animate-fade');
+
         weatherCondition.textContent = data.description;
+        animateElement(weatherCondition, 'animate-fade');
+
+        animateElement(weatherIcon, 'animate-icon');
+
+        // animateElement(dateElement, 'animate-fade');
       }
     })
-.catch(err => {
-  weatherCondition.textContent = "City Not Found!!";
-  locationElement.textContent = "";
-  tempElement.textContent = "";
-});
-
-
+    .catch(err => {
+      weatherCondition.textContent = "City Not Found!!";
+      animateElement(weatherCondition, 'animate-fade');
+      locationElement.textContent = "";
+      tempElement.textContent = "";
+    });
 });
