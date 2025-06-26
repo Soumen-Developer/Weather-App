@@ -212,6 +212,8 @@ h2 {
   .widget .weatherIcon {
     font-size: 60px;
     height: 120px;
+    padding-top: 20px;
+
   }
 
   .widget .weatherInfo {
@@ -311,7 +313,7 @@ h2 {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding-top: 10px
+    padding-top: 20px
   }
 
   .widget .weatherInfo {
