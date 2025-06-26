@@ -89,7 +89,7 @@ weatherForm.addEventListener('submit', (event) => {
         }
 
         // Animate updated content
-        locationElement.textContent = data.cityName;
+        locationElement.textContent = data.cityName + "," + data.countryName;
         animateElement(locationElement, 'animate-fade');
 
         tempElement.textContent = data.temperature + " °C";

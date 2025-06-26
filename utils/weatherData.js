@@ -16,8 +16,10 @@ const weatherData = (address, callback) => {
 
             const result = {
                 temperature: body.main.temp,
+                feelslike: body.main.feels_like,
                 description: body.weather[0].description,
-                cityName: body.name
+                cityName: body.name,
+                countryName: body.sys.country
             };
 
             callback(undefined, result);
