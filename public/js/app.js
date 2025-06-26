@@ -17,6 +17,12 @@ const monthElement = [
 dateElement.textContent =
   new Date().getDate() + ", " + monthElement[new Date().getMonth()].substring(0, 3);
 
+document.addEventListener('DOMContentLoaded', () => {
+  if (!weatherCondition.textContent) {
+    weatherCondition.textContent = "Hello!!";
+  }
+});
+
 weatherForm.addEventListener('submit', (event) => {
   event.preventDefault();
   const location = search.value.trim();
@@ -42,7 +48,7 @@ weatherForm.addEventListener('submit', (event) => {
       } else {
         const desc = data.description.toLowerCase();
 
-        // Set icon
+        // Set wi icon
         if (desc.includes("clear")) {
           weatherIcon.className = "wi wi-day-sunny";
         } else if (desc.includes("cloud")) {
@@ -66,17 +72,11 @@ weatherForm.addEventListener('submit', (event) => {
         weatherCondition.textContent = data.description;
       }
     })
-    .catch(err => {
-      weatherCondition.textContent = "City Not Found!!";
-      locationElement.textContent = "";
-      tempElement.textContent = "";
-    });
+.catch(err => {
+  weatherCondition.textContent = "City Not Found!!";
+  locationElement.textContent = "";
+  tempElement.textContent = "";
 });
 
 
-// {
-//       if (data.description === "rain" || data.description === "fog") {
-//         weatherIcon.className = "wi-day-cloudy" + data.description
-//       } else {
-//         weatherIcon.className = "wi wi-day-cloudy"
-//       }
+});
