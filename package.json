@@ -11,6 +11,8 @@
     "start": "node src/app.js"
   },
   "dependencies": {
+    "dotenv": "^16.6.0",
+    "env": "^0.0.2",
     "express": "^5.1.0",
     "fs": "^0.0.1-security",
     "hbs": "^4.2.0",

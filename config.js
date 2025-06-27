@@ -1,8 +1,11 @@
 // config.js
+const dotenv = require('dotenv');
+dotenv.config();
+
 const constants = {
     openWeatherMap: {
-        BASE_URL: "https://api.openweathermap.org/data/2.5/weather?q=",
-        SECRET_KEY: "8cf8ed69260a0b63ce6503b18112627b"
+        BASE_URL: process.env.BASE_URL,
+        SECRET_KEY: process.env.SECRET_KEY
     }
 };
 

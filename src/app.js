@@ -2,12 +2,13 @@ const express = require('express');
 const hbs = require('hbs');
 const path = require('path');
 const app = express();
-
+const dotenv = require('dotenv');
+dotenv.config();
 
 const weatherData = require('../utils/weatherData');
 const { url } = require('inspector');
 
-const port = process .env.PORT || 8000;
+const port = process.env.PORT || 8000;
 
 const publicStaticDirPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
